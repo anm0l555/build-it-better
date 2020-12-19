@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to our project!</title>
+        <link href="css/styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7810b9d36d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <!--Navbar-->
+        
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" id="nleft"><h1>Eatery</h1></a>
+        <div class="navele">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+   <div class="video-bg">
+    <video src="./img/Pizza - 6079.mp4" autoplay playsinline muted loop></video>
+   </div>
+    
+    <div style="padding-left:16px">
+        <h2>Responsive Topnav Example</h2>
+        <p>Resize the browser window to see how it works.</p>
+    </div>
+    <!--heading-->
+    <h2 class="conHead">Welcome to Eatery
+        
+    </h2>
+    <div >
+        <h3  id="contHead">Because peace is where there is pizza</h3>
+    </div>
+    <div id="contHead"><button class="btnHead" type="button"><a href="#">Order Now!!!</a></button></div>
+    <div id="contHead2"><a href="#"><i class="fas fa-arrow-down fa-2x"></i></a></div>
+    
+    
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+        x.className += " responsive";
+        } else {
+        x.className = "topnav";
+        }
+    }
+    </script>
+      
+      
+    </body>
+</html>
