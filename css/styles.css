@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Josefin Sans', Helvetica, sans-serif;
     background-color: #3B3535;
+    overflow-x: hidden!important;
   }
   
   .topnav {
@@ -74,7 +75,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden; 
-z-index:0;}
+z-index:-1;
+opacity: 0.5;}
    .video-bg::after {
      position: absolute;
       content: "";
@@ -139,3 +141,457 @@ z-index:0;}
           font-weight: bold;
           color:#3B3535;
       }
+/* pizza roll*/
+.pizzaroll1{
+  position: relative;
+  margin-left: -25rem!important;
+  height: 50rem;
+  
+}
+.pizzaroll2{
+ 
+  position: relative;
+  margin-right: -17rem!important;
+ 
+  height: 50rem;
+} 
+.row{
+  overflow: hidden;
+}
+
+.column {
+  max-width: 50%;
+  display: inline-block!important;
+  
+ 
+}
+#imgcrop{
+  overflow: hidden;
+  height: 435px;
+}
+#imgcrop2{
+  overflow: hidden;
+  height: 435px;
+  position: relative;
+  right: -17rem!important;
+}
+.parallax1{
+  /* The image used */
+ 
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container2{
+  height: 91vh;
+  background-color: #EDE0D4;
+  
+}
+.container3{
+  /* Full height */
+  height: 91vh; 
+  /* background: url(../img/pizza-1949183_1920-removebg-preview.png); */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.colmn{
+  
+  display: inline-block!important;
+  justify-content: center!important;
+  
+}
+.colmn .hdcol{
+  margin-top: 10rem;
+  margin-left: 10rem!important;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  line-height: 1.4;
+
+}
+.colmn .hdcol h1{
+  display: flex;
+  justify-content: center;
+}
+.colmn .hdbtn{
+  display: flex;
+  justify-content: center;
+  margin-left: 10rem!important;
+
+}
+.colmn .hdbtn button{
+  background-color: #F2A007;
+  color: #3B3535;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0.5rem 2rem ;
+  border-radius: 12rem;
+  border: solid 4px #3B3535;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto ;
+}
+
+#hdimg{
+  background: url(../img/kitchen-731351_1920.jpg);
+  height: 765px!important;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-top: 3rem;
+  width: 1280px!important;
+  right:  -21rem;
+  border-radius: 20rem;
+  overflow-x: hidden!important;
+}
+.col1{
+  margin-top: 11rem;
+  padding-left:0rem;
+}
+.col2{
+  margin-top: 9rem;
+  color: white;
+  
+ 
+}
+.col2 h1{
+  line-height: 1.6;
+  font-size: 40px;
+  text-align: center;
+  margin-left: -27rem!important;
+}
+.col2 button{
+  text-align: center;
+  margin-left: 5rem!important;
+  
+  background-color: white;
+  color: #3B3535;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 1.5rem 4rem ;
+  border-radius: 12rem;
+  border: solid 10px #3B3535;
+}
+/*Slideshow container*/
+.mySlides {display: none;}
+img {vertical-align: middle;}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  justify-content: center ;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 38px;
+  width: 100%;
+  position: relative;
+  
+ margin-left: 18rem;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  right: 10rem;
+  top: -2rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.container4{
+  height: 81vh; 
+  /* background: url(../img/pizza-1949183_1920-removebg-preview.png); */
+background-color: #EDE0D4;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+/*fourth row*/
+.tdofferhd{
+font-size: 50px!important;
+  
+}
+.tdoffer{
+  position: relative;
+  top: 5rem;
+  display: flex;
+  justify-content: center;
+  
+}
+.toffer{
+  padding: 7rem 5rem;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+#tocd{
+  padding: 10px;
+  background-color: white;
+  width: 331px;
+  /* box-shadow: 0 4px 8px 0 #3B3535; */
+  transition: 0.3s;
+
+}
+#tocd:hover{
+  
+    box-shadow: 0 8px 16px 0 #3B3535;
+  
+}
+
+.card1{
+}
+
+.toimg{
+  width: 331px;
+}
+
+/* container5 */
+.container5{
+  height: 35vh; 
+  /* background: url(../img/pizza-1949183_1920-removebg-preview.png); */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*footer*/
+.main {
+	max-height: 550px;;
+	background-color: #292c2f;
+	color: white;
+	font-size: 38pt;
+	text-align: center;
+	line-height: 550px;
+}
+footer{
+	/* position: fixed; */
+	bottom: 0;
+}
+.footer-distributed{
+	background-color: #3B3535;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+	width: 40%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+ 
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+	width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+ 
+}
