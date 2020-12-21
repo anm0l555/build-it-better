@@ -1,0 +1,232 @@
+body{
+    background-color:#3B3535 !important ;
+    font-family: 'Amatic SC', sans-serif!important
+}
+body, html {height: 100%;
+    background-color:#3B3535 !important;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif;
+    
+}
+/*Navbar*/
+
+.topnav {
+  
+  overflow: hidden;
+  background-color: #EDE0D4;
+  position: relative;
+  
+  padding-right:25em ;
+  padding-left:25em ;
+  z-index: 1;
+  height: 120px;
+
+  
+
+}
+#nleft{
+    float: left!important;
+}
+#nleft h1{
+  font-family: 'Amatic SC', sans-serif!important;
+  font-weight: bold;
+  font-size: 40px;
+
+}
+.navele{
+  position: relative;
+  margin-top: 2rem;
+
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: #3B3535;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px!important;
+  font-weight: bold;
+}
+
+
+
+.topnav a.active {
+  background-color: #3B3535;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/*Other*/
+.w3-black, .w3-hover-black:hover {
+    color: #fff!important;
+    background-color:#3B3535 !important;
+}
+#tags{
+    
+    background-color:#F2A007 !important;
+    color: black !important;
+    
+}
+#rates{
+
+}
+#bannerimage {
+    width: 100%;
+    background-image: url("../img/banner-final.png");
+    background-repeat: no-repeat;
+    height: 15rem;
+    padding-bottom: .5rem;
+    margin-bottom: 2%;
+    padding-bottom: 1rem;
+    background-position: center;
+  }
+.grid{
+  display: grid;
+  grid-template-columns: 45% 50%;
+}
+
+
+.h1{
+    font-family: "Amatic SC", sans-serif
+}
+.menu-title{
+    font-family: "Amatic SC", sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    color:#F2A007;
+    margin-top: 0em;
+    
+    padding:0
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    widows: 50rem;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-family: "Amatic SC", sans-serif;
+    background-color: #EDE0D4;
+    padding:3%;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  .desserts{
+      column-count: 3;
+  }
+  .dessert-image {
+    opacity: 1;
+    margin-top: 4%;
+    display: block;
+    width: 30% !important;
+    height:20rem;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }body {
+    background: #333;
+  }
+  .drinks{
+    background-color:#F2A007 !important;
+   height: 32rem;
+    border-radius: 3rem;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+  }
+  .drink-pics{
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+ #drinks-navigation{
+     width: 1rem;
+     height: 5rem;
+     align-items: center;
+     padding-right: 0%;
+     padding-left: 0%;
+     margin-left: 0.7rem;
+     margin-right: 0.7rem;
+ }
+  .dessert-text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  .card button {
+    border-radius: 3rem;
+    border-color: black;
+    border-style: dashed ;
+    border-width:0.3rem; 
+    outline: 0;
+    padding: 12px;
+    font-family: "Amatic SC", sans-serif;
+    color: rgb(0, 0, 0);
+    background-color:#F2A007;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  
+.food-genre{
+    font-family: "Amatic SC", sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    background-color:#F2A007;
+}
+.menu {
+    font-family: "Amatic SC", sans-serif;
+    background-color:#3B3535 !important;
+    display: none
+}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/w3images/pizza.jpg");
+  min-height: 90%;
+}
+.w3-text-grey{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
