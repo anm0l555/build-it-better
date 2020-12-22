@@ -1,3 +1,7 @@
+html{
+  cursor: url('../img/pizza1.png'), auto !important;
+
+}
 /*Preloader*/
 
 .loader-wrapper{
@@ -348,6 +352,7 @@ opacity: 0.5;}
   border-radius: 10px;
   font-size: x-large;
   font-family: 'Amatic SC';
+  outline: none;
 }
 
 .container5 button:hover{
@@ -359,6 +364,7 @@ opacity: 0.5;}
   border-radius: 10px;
   font-size: x-large;
   font-family: 'Amatic SC';
+  outline: none;
 }
 .ctctnt{
   font-size: xx-large;
@@ -404,6 +410,7 @@ opacity: 0.5;}
   padding: 0.5rem 2rem ;
   border-radius: 12rem;
   border: solid 4px #3B3535;
+  outline: none;
 }
 .colmn .hdbtn button:hover{
   background-color: #3B3535;
@@ -414,6 +421,7 @@ opacity: 0.5;}
   padding: 0.5rem 2rem ;
   border-radius: 12rem;
   border: solid 4px #3B3535;
+  outline: none;
 }
 
 .grid-container{
@@ -461,6 +469,7 @@ opacity: 0.5;}
   padding: 0.3rem 2rem ;
   border-radius: 12rem;
   border: solid 2px #3B3535;
+  outline: none;
 }
 .col2 button:hover{
   text-align: center!important;
@@ -473,6 +482,7 @@ opacity: 0.5;}
   padding: 0.5rem 2rem ;
   border-radius: 12rem;
   border: solid 2px white;
+  outline: none;
 }
 
 
