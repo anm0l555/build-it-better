@@ -422,11 +422,11 @@ opacity: 0.5;}
 
 #hdimg{
   background: url(../img/kitchen-731351_1920.jpg);
-  height: 110%!important;
+  height: 60vh;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  /* margin-top: 5rem!important; */
+  margin-top: 3.5%!important;
   width: 1280px!important;
   /* right:  -21rem; */
   border-radius: 20rem;
