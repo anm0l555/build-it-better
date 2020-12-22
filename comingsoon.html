@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to our project!</title>
+        <link href="css/styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7810b9d36d.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body id="csbody">
+    <!--Navbar-->
+        
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" id="nleft"><h1>Eatery</h1></a>
+        <div class="navele">
+        <a href="#contact">Contact Us</a>
+        <a href="comingsoon.html" class="active">Order Now</a>
+        <a href="menu-trial.html">Menu</a>
+        <a href="index.html"  >Home</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <canvas id="bg"></canvas>
+    <div class="cscontainer">
+        <!-- <div class="container"> -->
+            <div>
+              <span>C</span>
+              <span>O</span>
+              <span>M</span>
+              <span>I</span>
+              <span>N</span>
+              <span>G</span>
+            </div>
+            <div>
+                <span>S</span>
+                <span>O</span>
+                <span>O</span>
+                <span>N</span>
+                <span>!</span>
+                <span>!</span>
+              </div>
+          <!-- </div> -->
+    </div>
+
+
+    <div class="loader-wrapper">
+        <canvas id="pizza"></canvas>
+    </div>
+
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut(4000);
+        });
+ 
+    </script>
+ <script>
+       "use strict";
+
+// background animation
+(function() {
+
+  var Base, Particle, canvas, colors, context, draw, drawables, i, mouseX, mouseY, mouseVX, mouseVY, rand, update, click, min, max, colors, particles;
+
+  min = 1;
+  max = 8;
+  particles = 200;
+  colors = ["64, 32, 0", "250, 64, 0", "64, 0, 0", "200, 200, 200"];
+
+  rand = function(a, b) {
+    return Math.random() * (b - a) + a;
+  };
+
+  Particle = (function() {
+    function Particle() {
+      this.reset();
+    }
+
+    Particle.prototype.reset = function() {
+      this.color = colors[~~(Math.random()*colors.length)];
+      this.radius = rand(min, max);
+      this.x = rand(0, canvas.width);
+      this.y = rand(-20, canvas.height*0.5);
+      this.vx = -5 + Math.random()*10;
+      this.vy = 0.7 * this.radius;
+      this.valpha = rand(0.02, 0.09);
+      this.opacity = 0;
+      this.life = 0;
+      this.onupdate = undefined;
+      this.type = "dust";
+    };
+
+    Particle.prototype.update = function() {
+      this.x = (this.x + this.vx/3);
+      this.y = (this.y + this.vy/3);
+
+      if(this.opacity >=1 && this.valpha > 0) this.valpha *=-1;
+      this.opacity += this.valpha/3;
+      this.life += this.valpha/3;
+
+      if(this.type === "dust")
+        this.opacity = Math.min(1, Math.max(0, this.opacity));
+      else
+        this.opacity = 1;
+
+      if(this.onupdate) this.onupdate();
+      if(this.life < 0 || this.radius <= 0 || this.y > canvas.height){
+        this.onupdate = undefined;
+        this.reset();
+      }
+    };
+
+    Particle.prototype.draw = function(c) {
+      c.strokeStyle = "rgba(" + this.color + ", " + Math.min(this.opacity, 0.85) + ")";
+      c.fillStyle = "rgba(" + this.color + ", " + Math.min(this.opacity, 0.65) + ")";
+      c.beginPath();
+      c.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
+      c.fill();
+      c.stroke();
+    };
+
+    return Particle;
+
+  })();
+
+  mouseVX = mouseVY = mouseX = mouseY = 0;
+
+  canvas = document.getElementById("bg");
+  context = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  drawables = (function() {
+    var _i, _results;
+    _results = [];
+    for (i = _i = 1; _i <= particles; i = ++_i) {
+      _results.push(new Particle);
+    }
+    return _results;
+  })();
+
+  draw = function() {
+    var d, _i, _len;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    context.clearRect(0, 0, canvas.width, canvas.height)
+
+    for (_i = 0, _len = drawables.length; _i < _len; _i++) {
+      d = drawables[_i];
+      d.draw(context);
+    }
+  };
+
+  update = function() {
+    var d, _i, _len, _results;
+    _results = [];
+    for (_i = 0, _len = drawables.length; _i < _len; _i++) {
+      d = drawables[_i];
+      _results.push(d.update());
+    }
+    return _results;
+  };
+
+  document.onmousemove = function(e) {
+    mouseVX = mouseX;
+    mouseVY = mouseY;
+    mouseX = ~~e.pageX;
+    mouseY = ~~e.pageY;
+    mouseVX = ~~((mouseVX - mouseX)/2);
+    mouseVY = ~~((mouseVY - mouseY)/2);
+
+  };
+
+  window.addEventListener('resize', draw, false);
+  setInterval(draw, 1000 / 30);
+  setInterval(update, 1000 / 60);
+}).call(this);
+ </script>
+ <script>
+
+       let toRadians = (deg) => deg * Math.PI / 180
+        let map = (val, a1, a2, b1, b2) => b1 + (val - a1) * (b2 - b1) / (a2 - a1)
+
+        class Pizza {
+        constructor(id) {
+            this.canvas = document.getElementById(id)
+            this.ctx = this.canvas.getContext('2d')
+
+            this.sliceCount = 6
+            this.sliceSize = 80
+
+            this.width = this.height = this.canvas.height = this.canvas.width = this.sliceSize * 2 + 50
+            this.center = this.height / 2 | 0
+
+            this.sliceDegree = 360 / this.sliceCount
+            this.sliceRadians = toRadians(this.sliceDegree)
+            this.progress = 0
+            this.cooldown = 10
+
+        }
+
+        update() {
+            let ctx = this.ctx
+            ctx.clearRect(0, 0, this.width, this.height)
+
+            if (--this.cooldown < 0) this.progress += this.sliceRadians*0.01 + this.progress * 0.07
+
+            ctx.save()
+            ctx.translate(this.center, this.center)
+            
+            for (let i = this.sliceCount - 1; i > 0; i--) {
+
+            let rad
+            if (i === this.sliceCount - 1) {
+                let ii = this.sliceCount - 1
+
+                rad = this.sliceRadians * i + this.progress
+
+                ctx.strokeStyle = '#FBC02D'
+                cheese(ctx, rad, .9, ii, this.sliceSize, this.sliceDegree)
+                cheese(ctx, rad, .6, ii, this.sliceSize, this.sliceDegree)
+                cheese(ctx, rad, .5, ii, this.sliceSize, this.sliceDegree)
+                cheese(ctx, rad, .3, ii, this.sliceSize, this.sliceDegree)
+
+            } else rad = this.sliceRadians * i
+            
+            // border
+            ctx.beginPath()
+            ctx.lineCap = 'butt'
+            ctx.lineWidth = 11
+            ctx.arc(0, 0, this.sliceSize, rad, rad + this.sliceRadians)
+            ctx.strokeStyle = '#F57F17'
+            ctx.stroke()
+
+            // slice
+            let startX = this.sliceSize * Math.cos(rad)
+            let startY = this.sliceSize * Math.sin(rad)
+            let endX = this.sliceSize * Math.cos(rad + this.sliceRadians)
+            let endY = this.sliceSize * Math.sin(rad + this.sliceRadians)
+            let varriation = [0.9,0.7,1.1,1.2]
+            ctx.fillStyle = '#FBC02D'
+            ctx.beginPath()
+            ctx.moveTo(0, 0)
+            ctx.lineTo(startX, startY)
+            ctx.arc(0, 0, this.sliceSize, rad, rad + this.sliceRadians)
+            ctx.lineTo(0, 0)
+            ctx.closePath()
+            ctx.fill()
+            ctx.lineWidth = .3
+            ctx.stroke()
+
+            // meat
+            let x = this.sliceSize * .65 * Math.cos(rad + this.sliceRadians / 2)
+            let y = this.sliceSize * .65 * Math.sin(rad + this.sliceRadians / 2)
+            ctx.beginPath()
+            ctx.arc(x, y, this.sliceDegree / 6, 0, 2 * Math.PI)
+            ctx.fillStyle = '#D84315'
+            ctx.fill()
+
+            }
+
+            ctx.restore()
+
+            if (this.progress > this.sliceRadians) {
+            ctx.translate(this.center, this.center)
+            ctx.rotate(-this.sliceDegree * Math.PI / 180)
+            ctx.translate(-this.center, -this.center)
+
+            this.progress = 0
+            this.cooldown = 20
+            }
+
+        }
+
+        }
+
+        function cheese(ctx, rad, multi, ii, sliceSize, sliceDegree) {
+        let x1 = sliceSize * multi * Math.cos(toRadians(ii * sliceDegree) - .2)
+        let y1 = sliceSize * multi * Math.sin(toRadians(ii * sliceDegree) - .2)
+        let x2 = sliceSize * multi * Math.cos(rad + .2)
+        let y2 = sliceSize * multi * Math.sin(rad + .2)
+
+        let csx = sliceSize * Math.cos(rad)
+        let csy = sliceSize * Math.sin(rad)
+
+        var d = Math.sqrt((x1 - csx) * (x1 - csx) + (y1 - csy) * (y1 - csy))
+        ctx.beginPath()
+        ctx.lineCap = 'round'
+
+        let percentage = map(d, 15, 70, 1.2, 0.2)
+
+        let tx = x1 + (x2 - x1) * percentage
+        let ty = y1 + (y2 - y1) * percentage
+        ctx.moveTo(x1, y1)
+        ctx.lineTo(tx, ty)
+
+        tx = x2 + (x1 - x2) * percentage
+        ty = y2 + (y1 - y2) * percentage
+        ctx.moveTo(x2, y2)
+        ctx.lineTo(tx, ty)
+
+        ctx.lineWidth = map(d, 0, 100, 20, 2)
+        ctx.stroke()
+        }
+
+        let pizza = new Pizza('pizza')
+
+        ;(function update() {
+        requestAnimationFrame(update)
+        pizza.update()
+
+        }())
+   </script>
+    <script>
+    //NAvbar   
+    function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+
+        if (document.body.clientWidth < 1920) {
+        viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute('content', 'width=device-width, initial-scale=0.75, user-scalable=0');
+    }
+    </script>
+    </body>
+</html>

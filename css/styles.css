@@ -787,3 +787,75 @@ footer{
 	}
  
 }
+
+
+/*COming soon Page*/
+.csbody{
+  width:100%;
+  position:relatvie;
+}
+
+.cscontainer{
+  font-family: 'Amatic SC', cursive;
+  font-size: 180px;
+  text-align:center;
+  perspective: 800px;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.cscontainer span{
+  display:inline-block;
+  margin-left:-40px;
+  color:#EDE0D4;
+  transform-origin: 50% 70%;
+}
+
+.cscontainer span:nth-child(2n){
+  color:#F2A007;
+}
+
+.cscontainer span:nth-child(1){
+  animation: flipper 4s cubic-bezier(0.68, -0.55, 0.26, 1.55) both, fadeIn 3s both;
+}
+
+.cscontainer span:nth-child(2){
+  animation: flipper 4s cubic-bezier(0.68, -0.55, 0.26, 1.55) .2s both, fadeIn 3s both;
+}
+
+.cscontainer span:nth-child(3){
+  animation: flipper 4s cubic-bezier(0.68, -0.55, 0.26, 1.55) .4s both, fadeIn 3s both;
+}
+
+.cscontainer span:nth-child(4){
+  animation: flipper 4s cubic-bezier(0.68, -0.55, 0.26, 1.55) .6s both, fadeIn 3s both;
+}
+.cscontainer span:nth-child(5){
+  animation: flipper 4s cubic-bezier(0.68, -0.55, 0.26, 1.55) .8s both, fadeIn 3s both;
+}
+.cscontainer span:nth-child(6){
+  animation: flipper 4s cubic-bezier(0.68, -0.55, 0.26, 1.55) .10s both, fadeIn 3s both;
+}
+
+.cscontainer span:nth-child(7){
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .14s both, fadeIn 1s both;
+}
+
+
+@keyframes flipper{
+  from{transform: rotateX(90deg);}
+  to{transform: rotateX(0deg);}
+}
+
+@keyframes fadeIn{
+  from{opacity:0};
+  to{opacity:1};
+}
+
+
+#csbody, #bg{
+  width: 100%; height: 100%; position: relative; margin: 0; padding: 0; background: #111;
+  overflow: hidden!important;
+}
