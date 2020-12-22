@@ -1,6 +1,12 @@
 /*Preloader*/
 /*Preloader*/
+html{
+  cursor: url(../img/pizza2.png),auto!important;
+}
+button{
+  cursor: url(../img/pizza2.png),auto!important;
 
+}
 .loader-wrapper{
   width: 100%;
   height: 100%;
