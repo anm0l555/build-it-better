@@ -274,8 +274,6 @@ opacity: 0.5;}
 .parallax1{
   /* Full height */
   height: 86.3vh!important; 
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed!important;
   background-position: center;
   background-repeat: no-repeat;
@@ -285,23 +283,65 @@ opacity: 0.5;}
 }
 
 .container2{
-  /* background: url(../img/pizza-1949183_1920-removebg-preview.png); */
 
-  height: 91vh;
+  height: 70vh;
   background-color: #EDE0D4;
   
   position: relative;
   z-index:2 ;
+  padding: 3rem;
 }
 .container3{
   /* Full height */
   height: 91vh; 
+  /* background: url(../img/pizza-1949183_1920-removebg-preview.png); */
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed!important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.container5{
+  /* Full height */
+  height: 35vh; 
+  background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url(../img/restaurant-690569_1920.jpg);
+  padding: 4rem;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+}
+.container5 button{
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  padding: 0rem 2rem;
+  border: solid 2px;
+  border-radius: 10px;
+  font-size: x-large;
+  font-family: 'Amatic SC';
+}
+
+.container5 button:hover{
+  text-align: center;
+  color: #3B3535;
+  background-color:white;
+  padding: 0rem 2rem;
+  border: solid 2px;
+  border-radius: 10px;
+  font-size: x-large;
+  font-family: 'Amatic SC';
+}
+.ctctnt{
+  font-size: xx-large;
+  color: white;
+  line-height: 1.6;
 }
 
 .colmn{
@@ -312,21 +352,24 @@ opacity: 0.5;}
 }
 .colmn .hdcol{
   margin-top: 10rem;
-  margin-left: 10rem!important;
+  /* margin-left: 10rem!important; */
+  text-align: center!important;
   font-size: xx-large;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   line-height: 1.4;
 
 }
 .colmn .hdcol h1{
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
 }
 .colmn .hdbtn{
-  display: flex;
-  justify-content: center;
-  margin-left: 10rem!important;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin-left: 10rem!important; */
+  text-align: center;
   position: relative;
 
 }
@@ -353,18 +396,18 @@ opacity: 0.5;}
 
 .grid-container{
   display: grid;
-  grid-template-columns: auto auto ;
+  grid-template-columns: 50% auto ;
 }
 
 #hdimg{
   background: url(../img/kitchen-731351_1920.jpg);
-  height: 765px!important;
+  height: 110%!important;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  margin-top: 3rem;
+  /* margin-top: 5rem!important; */
   width: 1280px!important;
-  right:  -21rem;
+  /* right:  -21rem; */
   border-radius: 20rem;
   overflow-x: hidden!important;
 }
@@ -375,18 +418,19 @@ opacity: 0.5;}
 .col2{
   margin-top: 9rem;
   color: white;
+  text-align: center!important;
   
  
 }
 .col2 h1{
   line-height: 1.6;
   font-size: 40px;
-  text-align: center;
-  margin-left: -27rem!important;
+  text-align: center!important;
+  /* margin-left: -27rem!important; */
 }
 .col2 button{
-  text-align: center;
-  margin-left: 4.5rem!important;
+  text-align: center!important;
+  /* margin-left: 4.5rem!important; */
   font-family: Amatic SC;
   background-color: white;
   color: #3B3535;
@@ -397,8 +441,8 @@ opacity: 0.5;}
   border: solid 2px #3B3535;
 }
 .col2 button:hover{
-  text-align: center;
-  margin-left: 4.5rem!important;
+  text-align: center!important;
+  /* margin-left: 4.5rem!important; */
   font-family: Amatic SC;
   background-color: #3B3535;
   color: white;
@@ -419,6 +463,7 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   justify-content: center ;
+  text-align: center;
 }
 
 /* Caption text */
@@ -448,8 +493,8 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   position: relative;
-  right: 10rem;
-  top: -2rem;
+  text-align: center;
+  /* top: rem; */
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -486,12 +531,14 @@ img {vertical-align: middle;}
 .container4{
   height: 81vh; 
   /* background: url(../img/pizza-1949183_1920-removebg-preview.png); */
-background-color: #EDE0D4;
+  background-color: #EDE0D4;
   /* Create the parallax scrolling effect */
   background-attachment: fixed!important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
+  
+
 }
 /*fourth row*/
 .tdofferhd{
@@ -516,6 +563,7 @@ font-size: 50px!important;
   width: 331px;
   /* box-shadow: 0 4px 8px 0 #3B3535; */
   transition: 0.3s;
+  text-align: center!important;
 
 }
 #tocd:hover{
@@ -524,15 +572,13 @@ font-size: 50px!important;
   
 }
 
-.card1{
-}
 
 .toimg{
   width: 331px;
 }
 
 /* container5 */
-.container5{
+.container6{
   height: 35vh; 
   /* background: url(../img/pizza-1949183_1920-removebg-preview.png); */
 
@@ -586,7 +632,7 @@ footer{
 }
  
 .footer-distributed h3 span{
-	color:  #5383d3;
+	color:  #F2A007;
 }
  
  
@@ -648,7 +694,7 @@ footer{
 }
  
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	color:  #F2A007;
 	text-decoration: none;;
 }
  

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Menu </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -118,21 +119,21 @@
   </div>
 </div>
   <div class="desserts">
-    <div class="card">
+    <div class="card" data-aos="zoom-in-right">
       <img src="./img/dessert-1.jpg" alt="Denim Jeans" style="width:100% ;border-radius: 50rem !important; padding:2%">
       <h1 style="font-family: Amatic SC, sans-serif;color: #000;font-weight: bold;">Dessert 1</h1>
      
       <p style="margin-top: 0;">Some text about the dessert. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
       <p><button>Add to Cart</button></p>
     </div>
-    <div class="card">
+    <div class="card" data-aos="zoom-in-up">
       <img src="./img/dessert-1.jpg" alt="Denim Jeans" style="width:100% ;border-radius: 50rem !important;padding:2%">
       <h1 style="font-family: Amatic SC, sans-serif;color: #000;font-weight: bold;">Dessert 2</h1>
      
       <p style="margin-top: 0;">Some text about the dessert. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
       <p><button>Add to Cart</button></p>
     </div>
-    <div class="card">
+    <div class="card" data-aos="zoom-in-left">
       <img src="./img/dessert-1.jpg" alt="Denim Jeans" style="width:100% ;border-radius: 50rem !important;padding:2%">
       <h1 style="font-family: Amatic SC, sans-serif;color: #000;font-weight: bold;">Dessert 3</h1>
      
@@ -140,7 +141,7 @@
       <p><button>Add to Cart</button></p>
     </div>
   </div>
-  <div class="drinks">
+  <div class="drinks" data-aos="zoom-in">
     <h2 style="font-family: Amatic SC, sans-serif;font-weight: bold;text-align: center;font-size: 5rem;padding-top: 1rem;padding-bottom: 0;margin-bottom: 0;">DRINKS</h2>
     <div class="grid">
       <div class="col">
@@ -188,8 +189,10 @@
       </div>
       
     </div>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
 <script>
+  //Aos init
+  AOS.init({duration:2000});
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
